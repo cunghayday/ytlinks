@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Tách Liên Kết Youtube</title>
+  <title>Extract Youtube Links</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -10,9 +10,9 @@
 
 
 <p><textarea id="input" rows="4" cols="50" style="max-width: 96%;"></textarea></p>
-<button onclick="doit()">Tách</button>&nbsp;
-<button onclick="copy()">Chép</button>&nbsp;
-<button onclick="clearit()">Xoá</button>
+<button onclick="doit()">Extract URL</button>&nbsp;
+<button onclick="copy()">Copy list</button>&nbsp;
+<button onclick="clearit()">Clear list</button>
 <p><textarea id="output" rows="8" cols="50" style="max-width: 96%;"></textarea></p>
 <p id="nlinks"></p>
 
@@ -46,7 +46,7 @@ var result3 = result2.map(function(ytlink) {
 nlinks =  result3.length;
 let output = result3.join('\n');
 document.getElementById("output").value = output;
-document.getElementById("nlinks").innerHTML = 'Đã tách được <span style="font-weight:bold;">' + nlinks + '</span> liên kết.';
+document.getElementById("nlinks").innerHTML = '<span style="font-weight:bold;">' + nlinks + '</span> links was extracted.';
 }
  
 </script>
